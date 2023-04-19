@@ -19,10 +19,10 @@ const HomePage = () => {
         /> */}
         <meta property="og:image" content="/images/bonkedao-white-black.jpeg" />
         {/* // twitter */}
-        <meta name="twitter:card" content="BonkeDAO Movement" />
+        <meta name="twitter:card" content="BonkeDAO" />
         <meta name="twitter:site" content="@BonkeDAO" />
         <meta name="twitter:title" content="BonkeDAO" />
-        <meta name="twitter:description" content="A movement" />
+        <meta name="twitter:description" content="" />
         <meta
           name="twitter:image"
           content="/images/bonkedao-white-black.jpeg"
@@ -47,7 +47,7 @@ const HomePage = () => {
           </a>
           <div>
             <Text px={2} size={"h5"}>
-              Join the movement
+              Join
             </Text>
             <a
               style={{ marginRight: "5px" }}
