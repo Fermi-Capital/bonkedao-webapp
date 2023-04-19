@@ -7,29 +7,32 @@ const HomePage = () => {
   return (
     <>
       <Head>
-        <title>A Movement</title>
+        <title>BonkeDAO</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
-        <meta name="description" content="Bonkedao NFT" />
+        <meta name="description" content="Bonkedao" />
         {/* og */}
-        <meta property="og:title" content="Bonkedao NFT" />
+        <meta property="og:title" content="Bonkedao" />
         {/* <meta
           property="og:url"
           content="https://www.imdb.com/title/tt0117500/"
         /> */}
-        <meta property="og:image" content="/images/bonkedao-orange.png" />
+        <meta property="og:image" content="/images/bonkedao-white-black.jpeg" />
         {/* // twitter */}
-        <meta name="twitter:card" content="Bonkedao movement" />
+        <meta name="twitter:card" content="BonkeDAO Movement" />
         <meta name="twitter:site" content="@BonkeDAO" />
-        <meta name="twitter:title" content="Bonkedao" />
+        <meta name="twitter:title" content="BonkeDAO" />
         <meta name="twitter:description" content="A movement" />
-        <meta name="twitter:image" content="/images/bonkedao-orange.png" />
+        <meta
+          name="twitter:image"
+          content="/images/bonkedao-white-black.jpeg"
+        />
         {/* <meta
           name="google-site-verification"
           content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34="
         /> */}
-        <title>Bonkedao</title>
-        <meta name="bonkedao" content="noindex,nofollow" />
+        <title>BonkeDAO</title>
+        <meta name="BonkeDAO" content="noindex,nofollow" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
