@@ -13,6 +13,10 @@ const HomePage = () => {
         <meta name="description" content="Bonkedao" />
         {/* og */}
         <meta property="og:title" content="BonkeDAO" />
+        <meta
+          name="keywords"
+          content="bonkedao, solana, blockchain, decentralized, cryptocurrency, NFTs, DAO, dao, bonk, tensor"
+        ></meta>
         {/* <meta
           property="og:url"
           content="https://www.imdb.com/title/tt0117500/"
