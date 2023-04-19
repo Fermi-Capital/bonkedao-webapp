@@ -12,7 +12,7 @@ const HomePage = () => {
         <meta charSet="utf-8" />
         <meta name="description" content="Bonkedao" />
         {/* og */}
-        <meta property="og:title" content="Bonkedao" />
+        <meta property="og:title" content="BonkeDAO" />
         {/* <meta
           property="og:url"
           content="https://www.imdb.com/title/tt0117500/"
