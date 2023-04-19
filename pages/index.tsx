@@ -41,14 +41,29 @@ const HomePage = () => {
       </Head>
       <main>
         <Header>
-          <a href="https://twitter.com/BonkeDAO">
-            <Image
-              alt="twitter"
-              src="/images/twitter.svg"
-              width={25}
-              height={25}
-            />
-          </a>
+          <div>
+            <a
+              style={{ marginRight: "10px" }}
+              href="https://twitter.com/BonkeDAO"
+            >
+              <Image
+                style={{ verticalAlign: "middle" }}
+                alt="twitter"
+                src="/images/twitter.svg"
+                width={25}
+                height={25}
+              />
+            </a>
+            <a href="https://discord.gg/bonkedao">
+              <Image
+                style={{ verticalAlign: "middle" }}
+                alt="discord"
+                src="/images/discord.svg"
+                width={30}
+                height={30}
+              />
+            </a>
+          </div>
           <div>
             <Text px={2} size={"h5"}>
               Join
