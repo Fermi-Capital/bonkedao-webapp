@@ -38,6 +38,11 @@ const Text = styled(
         center: { textAlign: "center" },
         right: { textAlign: "right" },
       },
+      verticalAlign: {
+        top: { verticalAlign: "top" },
+        middle: { verticalAlign: "middle" },
+        bottom: { verticalAlign: "bottom" },
+      },
       px: {
         1: { paddingLeft: "$1", paddingRight: "$1" },
         2: { paddingLeft: "$2", paddingRight: "$2" },

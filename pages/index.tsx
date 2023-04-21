@@ -1,7 +1,12 @@
 import Head from "next/head";
+// @ts-ignore
+import localFont from "@next/font/local";
 
 import Image from "next/image";
 import { Header, Row, Text } from "@app/src/components";
+
+// Font files can be colocated inside of `pages`
+const myFont = localFont({ src: "./TeleSys.ttf" });
 
 const HomePage = () => {
   return (
@@ -64,8 +69,16 @@ const HomePage = () => {
               />
             </a>
           </div>
+          <Text size="h2" className={myFont.className}>
+            BonkeDAO
+          </Text>
           <div>
-            <Text px={2} size={"h5"}>
+            <Text
+              px={2}
+              size={"h3"}
+              className={myFont.className}
+              verticalAlign="middle"
+            >
               Join
             </Text>
             <a
