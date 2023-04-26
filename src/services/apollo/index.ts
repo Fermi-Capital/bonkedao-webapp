@@ -4,6 +4,7 @@ import { ApolloLink, concat } from "apollo-link";
 const authLink = new ApolloLink((operation, forward) => {
   operation.setContext({
     headers: {
+      "Access-Control-Allow-Origin": "*", // Required for CORS support to work
       "X-TENSOR-API-KEY": process.env.NEXT_PUBLIC_TENSOR_API_KEY,
     },
   });
