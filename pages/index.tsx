@@ -1,12 +1,6 @@
 import Head from "next/head";
-// @ts-ignore
-import localFont from "@next/font/local";
 
-import Image from "next/image";
-import { Header, Row, Text } from "@app/src/components";
-
-// Font files can be colocated inside of `pages`
-const myFont = localFont({ src: "./TeleSys.ttf" });
+import Home from "@app/src/pages/Home";
 
 const HomePage = () => {
   return (
@@ -44,77 +38,7 @@ const HomePage = () => {
         <meta name="BonkeDAO" content="noindex,nofollow" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <Header>
-          <div>
-            <a
-              style={{ marginRight: "10px" }}
-              href="https://twitter.com/BonkeDAO"
-            >
-              <Image
-                style={{ verticalAlign: "middle" }}
-                alt="twitter"
-                src="/images/twitter.svg"
-                width={25}
-                height={25}
-              />
-            </a>
-            <a href="https://discord.gg/bonkedao">
-              <Image
-                style={{ verticalAlign: "middle" }}
-                alt="discord"
-                src="/images/discord.svg"
-                width={30}
-                height={30}
-              />
-            </a>
-          </div>
-          <Text size="h2" className={myFont.className}>
-            BonkeDAO
-          </Text>
-          <div>
-            <Text
-              px={2}
-              size={"h3"}
-              className={myFont.className}
-              verticalAlign="middle"
-            >
-              Join
-            </Text>
-            <a
-              style={{ marginRight: "5px" }}
-              href="https://www.tensor.trade/trade/doge_"
-            >
-              <Image
-                style={{ verticalAlign: "middle" }}
-                alt="tensor"
-                src="/images/tensor.svg"
-                width={25}
-                height={25}
-              />
-            </a>
-            <a href="https://magiceden.io/marketplace/doge_?checkoutTab=buy">
-              <Image
-                style={{ verticalAlign: "middle" }}
-                alt="magic-eden"
-                src="/images/magiceden.svg"
-                width={25}
-                height={25}
-              />
-            </a>
-          </div>
-        </Header>
-        <div>
-          <video
-            style={{ width: "100vw", height: "100vh" }}
-            autoPlay
-            playsInline
-            muted
-            src={require("../public/mp4s/bonkedao-intro.mp4")}
-          />
-        </div>
-        {/* <Image alt="Bonkedao" src="/images/bonkedao-white-black.jpeg" fill /> */}
-      </main>
+      <Home />
     </>
   );
 };
