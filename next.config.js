@@ -4,16 +4,11 @@ const withVideos = require("next-videos");
 const nextConfig = {
   reactStrictMode: true,
   // allow cors for all domains
-  async headers() {
+  async rewrites() {
     return [
       {
-        source: "/(.*)",
-        headers: [
-          {
-            key: "Access-Control-Allow-Origin",
-            value: "*",
-          },
-        ],
+        source: "*",
+        destination: "*",
       },
     ];
   },
