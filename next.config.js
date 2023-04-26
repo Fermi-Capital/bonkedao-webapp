@@ -22,6 +22,11 @@ const nextConfig = {
             key: "Access-Control-Allow-Credentials",
             value: true,
           },
+          // mode: "cors",
+          {
+            key: "mode",
+            value: "no-cors",
+          },
         ],
       },
     ];
