@@ -24,7 +24,6 @@ const CollectionStats: FC = () => {
       slugsDisplay: ["doge_"],
     },
   });
-  console.log(data);
 
   const renderStats = useMemo(() => {
     if (!isUndefined(data)) {

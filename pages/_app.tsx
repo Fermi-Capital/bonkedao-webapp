@@ -5,7 +5,7 @@ import { MantineProvider } from "@mantine/core";
 // import { theme } from "@app/src/styles/mantine-theme";
 import localFont from "@next/font/local";
 import { ApolloProvider } from "@apollo/client";
-import client from "./api/apollo";
+import client from "../src/services/apollo";
 
 const myFont = localFont({ src: "./Telesys.ttf" });
 

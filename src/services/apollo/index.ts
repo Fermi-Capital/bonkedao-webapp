@@ -4,7 +4,7 @@ import { ApolloLink, concat } from "apollo-link";
 const authLink = new ApolloLink((operation, forward) => {
   operation.setContext({
     headers: {
-      "X-TENSOR-API-KEY": "ce75115e-6cfb-470e-8f7c-dfdf286a3da5",
+      "X-TENSOR-API-KEY": process.env.NEXT_PUBLIC_TENSOR_API_KEY,
     },
   });
   return forward(operation);
