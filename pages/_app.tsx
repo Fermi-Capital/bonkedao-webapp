@@ -7,7 +7,7 @@ import localFont from "@next/font/local";
 import { ApolloProvider } from "@apollo/client";
 import client from "../src/services/apollo";
 
-const myFont = localFont({ src: "./Telesys.ttf" });
+const myFont = localFont({ src: "../public/TeleSys.ttf" });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
