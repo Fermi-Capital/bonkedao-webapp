@@ -18,8 +18,9 @@ const nextConfig = {
             value: "GET,OPTIONS,PATCH,DELETE,POST,PUT",
           },
           {
-            key: "cors",
-            value: false,
+            // allow credentials
+            key: "Access-Control-Allow-Credentials",
+            value: true,
           },
         ],
       },
