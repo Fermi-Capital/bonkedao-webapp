@@ -78,9 +78,9 @@ const CollectionStats: FC = () => {
       {isLoading && (
         <>
           <Skeleton height={50} mb="lg" />
-          <Skeleton height={50} radius="xl" />
-          <Skeleton height={50} mt={6} radius="xl" />
-          <Skeleton height={51} mt={6} width="70%" radius="xl" />
+          <Skeleton height={50} />
+          <Skeleton height={50} mt={6} />
+          <Skeleton height={51} mt={6} width="70%" />
         </>
       )}
       {renderStats}
