@@ -6,7 +6,7 @@ const authLink = new ApolloLink((operation, forward) => {
     headers: {
       "Access-Control-Allow-Origin": "*", // Required for CORS support to work
       "Access-Control-Allow-Credentials": true, // Required for cookies, authorization headers with HTTPS
-      "X-TENSOR-API-KEY": process.env.NEXT_PUBLIC_TENSOR_API_KEY,
+      "X-TENSOR-API-KEY": process.env.TENSOR_API_KEY,
       mode: "no-cors",
     },
   });

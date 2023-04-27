@@ -1,14 +1,9 @@
-import { useQuery } from "@apollo/client";
-import { GET_COLLECTION_STATS } from "@app/graphql/collectionStats";
 import { BarChartIcon } from "@radix-ui/react-icons";
 import {
-  ActionIcon,
-  Badge,
   Box,
   Button,
   Divider,
   Flex,
-  Progress,
   SimpleGrid,
   Skeleton,
   Text,
@@ -17,18 +12,15 @@ import {
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 import { isUndefined } from "lodash";
 import { FC, useMemo } from "react";
+import useSWR from "swr";
+import { fetcher } from "@app/src/utils/fetcher";
 
 const CollectionStats: FC = () => {
-  const { data, loading, error } = useQuery(GET_COLLECTION_STATS, {
-    variables: {
-      slugsDisplay: ["doge_"],
-    },
-  });
+  const { data, isLoading } = useSWR(`/api/stats/collection`, fetcher);
 
   const renderStats = useMemo(() => {
-    if (!isUndefined(data)) {
-      const { floorPrice, floor24h, volume24h, sales24h, numListed, numMints } =
-        data?.allCollections?.collections[0].statsOverall;
+    if (!isUndefined(data) || !isLoading) {
+      const { floorPrice, numListed, numMints, sales24h, volume24h } = data;
       return (
         <Box
           p={6}
@@ -80,10 +72,10 @@ const CollectionStats: FC = () => {
         </Box>
       );
     }
-  }, [data]);
+  }, [data, isLoading]);
   return (
     <>
-      {loading && (
+      {isLoading && (
         <>
           <Skeleton height={50} mb="lg" />
           <Skeleton height={50} radius="xl" />
