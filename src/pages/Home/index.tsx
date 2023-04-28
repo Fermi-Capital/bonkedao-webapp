@@ -89,7 +89,7 @@ const Home: FC = () => {
             </Flex>
           </Flex>
           <Title order={4} mb={20}>
-            {`Welcome to Solana Bonk Business (BonkeDAO), where limitless community potential flourishes within a collaborative atmosphere. Through the innovative trait based subDAO structure, esteemed Bonkes collaborate to shape the project's future. Embracing the Bonk spirit and guided by the motto "Culture > Caviar," we prioritize cultural values over profits, crafting a collaborative and inclusive environment. By providing a haven for those who have been wronged or scammed, we unite to foster collective growth and create a lasting, positive impact on Bonk Culture and the Solana Ecosystem.`}
+            {`Welcome to BonkeDAO, where limitless community potential flourishes within a collaborative atmosphere. Through the innovative trait based subDAO structure, esteemed Bonkes collaborate to shape the project's future. Embracing the Bonk spirit and guided by the motto "Culture > Caviar," we prioritize cultural values over profits, crafting a collaborative and inclusive environment. By providing a haven for those who have been wronged or scammed, we unite to foster collective growth and create a lasting, positive impact on Bonk Culture and the Solana Ecosystem.`}
           </Title>
           <Borrowing />
           <CollectionStats />
