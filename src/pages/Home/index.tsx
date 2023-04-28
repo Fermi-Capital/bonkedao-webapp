@@ -41,53 +41,33 @@ const Home: FC = () => {
               wrap="wrap"
             >
               <Avatar
-                style={{ right: "-50px" }}
+                style={{ right: "-30px" }}
                 src="/images/bonks/bonk-1.png"
                 radius="xl"
               />
               <Avatar
-                style={{ right: "-45px" }}
+                style={{ right: "-25px" }}
                 src="/images/bonks/bonk-2.png"
                 radius="xl"
               />
               <Avatar
-                style={{ right: "-40px" }}
+                style={{ right: "-20px" }}
                 src="/images/bonks/bonk-3.png"
                 radius="xl"
               />
               <Avatar
-                style={{ right: "-35px" }}
+                style={{ right: "-15px" }}
                 src="/images/bonks/bonk-4.png"
                 radius="xl"
               />
               <Avatar
-                style={{ right: "-30px" }}
+                style={{ right: "-10px" }}
                 src="/images/bonks/bonk-5.png"
                 radius="xl"
               />
               <Avatar
-                style={{ right: "-25px" }}
-                src="/images/bonks/bonk-6.png"
-                radius="xl"
-              />
-              <Avatar
-                style={{ right: "-20px" }}
-                src="/images/bonks/bonk-7.png"
-                radius="xl"
-              />
-              <Avatar
-                style={{ right: "-15px" }}
-                src="/images/bonks/bonk-8.png"
-                radius="xl"
-              />
-              <Avatar
-                style={{ right: "-10px" }}
-                src="/images/bonks/bonk-9.png"
-                radius="xl"
-              />
-              <Avatar
                 style={{ right: "-5px" }}
-                src="/images/bonks/bonk-10.png"
+                src="/images/bonks/bonk-6.png"
                 radius="xl"
               />
               <Avatar src="/images/bonks/bonk-11.png" radius="xl" />

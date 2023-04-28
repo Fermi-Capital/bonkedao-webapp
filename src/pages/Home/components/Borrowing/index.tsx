@@ -14,9 +14,9 @@ const Borrowing: FC = () => {
     >
       <Flex align="center" justify="space-between">
         <Title order={3}>Borrowing Options</Title>
-        <Group>
+        <Flex justify="right">
           <Button
-            mb={4}
+            mr={4}
             color="blue"
             variant="light"
             component="a"
@@ -33,7 +33,6 @@ const Borrowing: FC = () => {
             Frakt
           </Button>
           <Button
-            mb={4}
             color="blue"
             variant="light"
             component="a"
@@ -49,7 +48,7 @@ const Borrowing: FC = () => {
           >
             Sharky
           </Button>
-        </Group>
+        </Flex>
       </Flex>
 
       <SimpleGrid cols={2}></SimpleGrid>
