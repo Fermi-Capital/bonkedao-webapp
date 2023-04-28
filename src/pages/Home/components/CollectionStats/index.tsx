@@ -37,7 +37,7 @@ const CollectionStats: FC = () => {
               variant="light"
               component="a"
               href="https://www.tensor.trade/trade/doge_"
-              rightIcon={<BarChartIcon />}
+              rightIcon={<BarChartIcon color="white" />}
             >
               Trade
             </Button>
