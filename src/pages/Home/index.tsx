@@ -26,7 +26,7 @@ const Home: FC = () => {
     }
     return (
       <Center className={classes.slideIn}>
-        <Flex direction="column" w={550} m={16}>
+        <Flex direction="column" maw={550} m={16}>
           <Flex justify="space-between">
             <Image
               alt="Bonkedao"
@@ -34,7 +34,12 @@ const Home: FC = () => {
               width={100}
               height={100}
             />
-            <Flex direction={"row"} align="center">
+            <Flex
+              direction={"row"}
+              align="center"
+              justify={"flex-end"}
+              wrap="wrap"
+            >
               <Avatar
                 style={{ right: "-50px" }}
                 src="/images/bonks/bonk-1.png"
