@@ -1,5 +1,5 @@
 // // using tensor graphql api, pull all listed nfts for slug _doge and format to
-
+export {};
 // import { gql } from "@apollo/client";
 // import client from "../apollo";
 
