@@ -1,55 +1,83 @@
-// // using tensor graphql api, pull all listed nfts for slug _doge and format to
+// using tensor graphql api, pull all listed nfts for slug _doge and format to
 
-// import { gql } from "@apollo/client";
-// import client from "../apollo";
+import { gql } from "@apollo/client";
+import client from "../apollo";
 
-// // return the highest price for each nft trait in the collection
-// export default async function handler(req, res) {
-//   const { slug } = req.query;
-//   const { data } = await client.query({
-//     query: gql`
-//       query GetCollection($slug: String!) {
-//         collection(slug: $slug) {
-//           nfts {
-//             name
-//             tokenId
-//             traits {
-//               traitType
-//               value
-//             }
-//             orders(first: 1, orderBy: "currentPrice", orderDirection: desc) {
-//               currentPrice {
-//                 amount
-//               }
-//             }
-//           }
-//         }
-//       }
-//     `,
-//     variables: {
-//       slug,
-//     },
-//   });
-//   const nfts = data.collection.nfts;
-//   const traits = {};
-//   nfts.forEach((nft) => {
-//     nft.traits.forEach((trait) => {
-//       if (!traits[trait.traitType]) {
-//         traits[trait.traitType] = [];
-//       }
-//       traits[trait.traitType].push({
-//         name: nft.name,
-//         tokenId: nft.tokenId,
-//         value: trait.value,
-//         price: nft.orders[0].currentPrice.amount,
-//       });
-//     });
-//   });
-//   const highestPrice = {};
-//   Object.keys(traits).forEach((traitType) => {
-//     const traitValues = traits[traitType];
-//     traitValues.sort((a, b) => b.price - a.price);
-//     highestPrice[traitType] = traitValues[0];
-//   });
-//   res.status(200).json(highestPrice);
-// }
+interface TraitStats {
+  [key: string]: {
+    [key: string]: {
+      n: number;
+      p: number;
+    };
+  };
+}
+
+interface TraitMeta {
+  [key: string]: {
+    [key: string]: {
+      n: number;
+      img: string;
+    };
+  };
+}
+
+interface Trait {
+  numListed: number;
+  numExisting: number;
+  fp: number;
+  img: string;
+}
+
+// return the highest price for each nft trait in the collection
+export default async function handler(req, res) {
+  const { data } = await client.query({
+    query: gql`
+      query AllCollections($slugsDisplay: [String!]) {
+        allCollections(slugsDisplay: $slugsDisplay) {
+          collections {
+            traits {
+              numMints
+              rarityAlgos
+              traitActive
+              traitMeta
+            }
+            meFloorPrice
+            imageUri
+            name
+          }
+        }
+      }
+    `,
+    variables: {
+      slugsDisplay: ["doge_"],
+    },
+  });
+  let traits: Trait[] = [];
+  const traitsListed: TraitStats =
+    data.allCollections.collections[0].traits.traitActive;
+  const subTraitsListed = Object.keys(traitsListed);
+  const traitsMeta: TraitMeta =
+    data.allCollections.collections[0].traits.traitActive;
+  const subTraitsMeta = Object.keys(traitsMeta);
+  console.log(traitsListed, traitsMeta);
+
+  // create new array of traits from subTraitsMeta and add in subTraitsListed
+  // to the same object in the array where they match
+  for (let i = 0; i < subTraitsMeta.length; i++) {
+    for (let j = 0; j < subTraitsListed.length; j++) {
+      if (subTraitsMeta[i] === subTraitsListed[j]) {
+        traits.push({
+          numListed: 34, // subTraitsListed[j].n,
+          numExisting: 432, // subTraitsMeta[i].n,
+          fp: 1, // subTraitsListed[j].p,
+          img: "", // subTraitsMeta[i].img,
+        });
+      }
+    }
+  }
+
+  // sort the array by fp
+  traits.sort((a, b) => (a.fp > b.fp ? -1 : 1));
+
+  res.status(200).json(traits);
+}
