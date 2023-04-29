@@ -26,7 +26,7 @@ const CollectionStats: FC = () => {
           p={6}
           style={{
             background:
-              "linear-gradient(280deg, rgba(16, 111, 52, 0.3) 20%, rgba(13, 74, 36, 0.2) 40%)",
+              "linear-gradient(280deg, rgba(16, 111, 51, 0.3) 20%, rgba(13, 74, 36, 0.2) 40%)",
           }}
         >
           <Flex align="center" justify="space-between">
